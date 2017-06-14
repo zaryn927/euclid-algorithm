@@ -29,7 +29,23 @@ public class Gcd {
   }
   
   public static int gcd(int a, int b){
-    return 0;
+    if(a < 0 || b < 0){
+      a = Math.abs(a);
+      b = Math.abs(b);
+    }
+    if(a == 0){
+      return b;
+    }else if(b == 0){
+      return a;
+    }
+    while(a != b){
+      if(a > b){
+        a -= b;
+      }else if(b > a){
+        b -= a;
+      }
+    }
+    return a;
   }
 
 }
