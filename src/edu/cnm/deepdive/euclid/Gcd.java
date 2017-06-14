@@ -17,7 +17,8 @@ public class Gcd {
     try {
       int a = Integer.parseInt(args[0]);
       int b = Integer.parseInt(args[1]);
-      System.out.println(a + " " + b);
+      int g = gcd(a,b);
+      System.out.printf("The GCD of %d and %d is %d%n",a,b,g);
     } catch (ArrayIndexOutOfBoundsException ex){
       emitUsage();
     } catch (NumberFormatException ex) {
@@ -25,6 +26,10 @@ public class Gcd {
       emitUsage();
     }
 
+  }
+  
+  public static int gcd(int a, int b){
+    return 0;
   }
 
 }
